@@ -5,13 +5,10 @@ import LoginPage from './pages/LoginPage';
 import { useState } from 'react';
 import AppTabs from './AppTabs';
 import { AuthContext } from './auth';
-import PageNotFound from './pages/PageNotFound';
 
-import './theme/dashboard.css'
 
 const App: React.FC = () => {
-  const [loggedIn, setLoggedIn] = useState(true)
-  console.log(`rendering App with loggedIn = ${loggedIn}`)
+  const [loggedIn, setLoggedIn] = useState(false)
 
   return (
     <AuthContext.Provider value={{loggedIn}}>
@@ -20,14 +17,12 @@ const App: React.FC = () => {
           <Switch>
             <Route exact path='/login'> 
               <LoginPage 
-              onLogin={() => {setLoggedIn(true)}} 
+              loggedIn = {loggedIn}
+              setLoggedIn={setLoggedIn}
               />
             </Route>
             <Route path='/my' >
               <AppTabs />
-            </Route>
-            <Route>
-              <PageNotFound />
             </Route>
             <Redirect exact path='/' to='/my/dashboard' />
           </Switch>

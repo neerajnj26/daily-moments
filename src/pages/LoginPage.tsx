@@ -1,15 +1,16 @@
 import { IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import { Redirect } from 'react-router';
-import { useAuth } from '../auth';
 import LoginBox from './LoginBox';
 import JoinConference from './JoinConference';
 import { useState } from 'react';
 
-interface Props {
-  onLogin: () => void;
+interface LoginProp{
+  loggedIn: boolean;
+  setLoggedIn: (loggedIn: boolean) => void;
+
 }
 
-const LoginPage: React.FC<Props> = ({ onLogin}) => {
+const LoginPage: React.FC<LoginProp> = ({loggedIn, setLoggedIn}) => {
 
   const [showJoinConference, setShowJoinConference] = useState(false);
 
@@ -20,9 +21,6 @@ const LoginPage: React.FC<Props> = ({ onLogin}) => {
   const handleBackClick = () => {
     setShowJoinConference(false);
   };
-
-  const {loggedIn} = useAuth()
-
 
   if (loggedIn){
     return <Redirect to='/my/dashboard' />
@@ -48,7 +46,9 @@ const LoginPage: React.FC<Props> = ({ onLogin}) => {
           <IonRow>
             <IonCol size='12'>
               {!showJoinConference?
-              <LoginBox onJoinConferenceClick={handleJoinConferenceClick}/> :
+              <LoginBox 
+              onJoinConferenceClick={handleJoinConferenceClick}
+              setLoggedIn={setLoggedIn}/> :
               <JoinConference onBackClick={handleBackClick}/>}
             </IonCol>
           </IonRow>

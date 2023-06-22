@@ -5,7 +5,7 @@ import { IonText, IonGrid, IonCol, IonRow, IonButton, IonCard, IonCardContent, I
 
 
 
-const LoginBox = ({ onJoinConferenceClick }: { onJoinConferenceClick: () => void }) => {
+const LoginBox = ({ onJoinConferenceClick, setLoggedIn }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
@@ -29,7 +29,7 @@ const LoginBox = ({ onJoinConferenceClick }: { onJoinConferenceClick: () => void
       if (username === validUsername && password === validPassword) {
         // Successful login, navigate to the dashboard
         setError('')
-        console.log('Successfully Logged in')
+        setLoggedIn(true)
       } else {
         // Invalid credentials, display error message
         setError('Invalid username or password.');
