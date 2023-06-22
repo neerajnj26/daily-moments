@@ -1,0 +1,19 @@
+ion-tab-button {
+    --background: #0161b0;
+    --color-selected: #ffffff; /* Set the text color */
+}
+
+ion-tab-button:not(.selected) {
+    --color: #8dbff4;
+}
+
+.tab-bar{
+    height: 4rem;
+}
+
+ion-toolbar{
+    --background:#0161b0;
+    --color: #ffffff;
+}
+
+
