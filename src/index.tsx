@@ -20,8 +20,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 // import './theme/variables.css';
-import './theme/dashboard.css'
+import './theme/variables.css'
 import './theme/basic.css'
+import './theme/dashboard.css'
 
 setupIonicReact();
 

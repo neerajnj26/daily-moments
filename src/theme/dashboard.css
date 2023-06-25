@@ -16,4 +16,11 @@ ion-toolbar{
     --color: #ffffff;
 }
 
+.start-conf-btn{
+    height: 60px;
+}
+
+.start-conf-btn .start-conf-btn-icon{
+    margin-right: 8px;
+}
 

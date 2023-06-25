@@ -8,7 +8,7 @@ import { AuthContext } from './auth';
 
 
 const App: React.FC = () => {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(true)
 
   return (
     <AuthContext.Provider value={{loggedIn}}>

@@ -78,7 +78,7 @@ const JoinConference = ({onBackClick}) => {
           <IonRow>
             <IonCol size="12">
               <IonButton
-                className="login-join-button"
+                className="join-button"
                 expand="full"
                 onClick={joinHandle}>
                 JOIN CONFERENCE

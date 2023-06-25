@@ -13,28 +13,17 @@
 }
 
 .login-box{
-    box-shadow: none;
     margin: 3rem 0;
     text-align: center;
 }
 
 .join-box{
-    box-shadow: none;
     margin: 5rem 0;
 }
 
 .login-join-title{
     font-family: 'Roboto';
     text-align: center;
-}
-
-.login-join-button {
-	--ion-color-primary: #0161b0;
-	--ion-color-primary-rgb: 1,97,176;
-	--ion-color-primary-contrast: #ffffff;
-	--ion-color-primary-contrast-rgb: 255,255,255;
-	--ion-color-primary-shade: #01559b;
-	--ion-color-primary-tint: #1a71b8;
 }
 
 .visibility-button{
@@ -56,7 +45,7 @@
 
 .join-conference-btn{
     --border-color: rgb(199, 37, 37);
-    color: #000000;
+    --color: #000000;
 }
 
 .error-login{
@@ -91,3 +80,21 @@ to {
 }
 }
 
+/* Ion Component Styles */
+
+ion-button {
+	--ion-color-primary: #0161b0;
+	--ion-color-primary-rgb: 1,97,176;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #01559b;
+	--ion-color-primary-tint: #1a71b8;
+}
+
+ion-card{
+    box-shadow: none;
+}
+
+ion-toolbar{
+    padding-top: 40px;
+}

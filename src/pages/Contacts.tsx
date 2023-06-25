@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 const Contacts: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Contacts</IonTitle>
         </IonToolbar>

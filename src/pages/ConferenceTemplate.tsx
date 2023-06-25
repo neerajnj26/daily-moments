@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 const ConferenceTemplate: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>Conference Templates</IonTitle>
         </IonToolbar>

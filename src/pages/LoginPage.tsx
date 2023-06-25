@@ -1,7 +1,7 @@
 import { IonCol, IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import { Redirect } from 'react-router';
-import LoginBox from './LoginBox';
-import JoinConference from './JoinConference';
+import LoginBox from '../components/LoginBox';
+import JoinConference from '../components/JoinConference';
 import { useState } from 'react';
 
 interface LoginProp{
@@ -28,7 +28,7 @@ const LoginPage: React.FC<LoginProp> = ({loggedIn, setLoggedIn}) => {
   
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent={true}>
         <IonToolbar>
           <IonTitle>BSNL MVCS</IonTitle>
         </IonToolbar>

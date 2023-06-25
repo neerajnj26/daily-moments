@@ -84,7 +84,7 @@ const LoginBox = ({ onJoinConferenceClick, setLoggedIn }) => {
           <IonRow>
             <IonCol size="12">
               <IonButton
-                className="login-join-button"
+                className="login-button"
                 expand="full"
                 onClick={loginHandle}>
                 LOGIN

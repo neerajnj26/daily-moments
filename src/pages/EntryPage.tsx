@@ -14,7 +14,7 @@ if(!entry){
 }
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent={true}>
         <IonToolbar>
           <IonButtons slot='start'>
             <IonBackButton style={{color:'#ffffff'}} />

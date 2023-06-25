@@ -1,16 +1,16 @@
-import { IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from '@ionic/react';
+import { IonIcon, IonLabel, IonMenu, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from '@ionic/react';
 import { home as homeIcon, call as callIcon, book as bookIcon, newspaper as newspaperIcon } from 'ionicons/icons'
 import { Route, Redirect } from 'react-router-dom';
-import EntryPage from './pages/EntryPage';
 import { useAuth } from './auth';
 import CreateConf from './pages/CreateConf';
 import Contacts from './pages/Contacts';
 import './theme/dashboard.css'
 import ConferenceTemplate from './pages/ConferenceTemplate';
-import HomePage from './pages/HomePage';
+import Dashboard from './pages/Dashboard';
 
 
 const AppTabs: React.FC = () => {
+
   const { loggedIn } = useAuth()
 
   if (!loggedIn) {
@@ -21,10 +21,7 @@ const AppTabs: React.FC = () => {
     <IonTabs>
       <IonRouterOutlet>
         <Route exact path='/my/dashboard'>
-          <HomePage />
-        </Route>
-        <Route exact path='/my/dashboard/:id'>
-          <EntryPage />
+          <Dashboard />
         </Route>
         <Route exact path='/my/call'>
           <CreateConf />
